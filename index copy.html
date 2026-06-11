@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroConecta | Plataforma de Impacto Comunitário</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container header-flex">
+            <div class="header-texto">
+                <h1>🌱 AgroConecta</h1>
+                <p>Fortalecendo a economia local através da tecnologia de rastreamento e conexão direta do campo à mesa.</p>
+            </div>
+            <div class="badges-projeto">
+                <span class="tag-agrinho">PROJETO AGRINHO 2026</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="container">
+        <div class="painel-estatisticas">
+            <div class="card-estatistica">
+                <h3 id="qtd-produtores">0</h3>
+                <p>Produtores Cadastrados</p>
+            </div>
+            <div class="card-estatistica">
+                <h3 id="comunidades-atendidas">0</h3>
+                <p>Comunidades Atendidas</p>
+            </div>
+            <div class="card-estatistica">
+                <h3 id="impacto-financeiro">R$ 0,00</h3>
+                <p>Economia Local Estimada/Mês</p>
+            </div>
+        </div>
+    </section>
+
+    <main class="container duas-colunas">
+        
+        <aside class="coluna-cadastro">
+            <div class="caixa-branca">
+                <h2>Incentive um Produtor</h2>
+                <p class="subtitulo-caixa">Preencha os dados abaixo para mapear e dar visibilidade a uma nova família rural.</p>
+                
+                <form id="form-produtor">
+                    <div class="grupo-campo">
+                        <label for="nome">Nome do Produtor / Família</label>
+                        <input type="text" id="nome" placeholder="Ex: Sítio Três Irmãos" required>
+                    </div>
+
+                    <div class="grupo-campo">
+                        <label for="local">Comunidade Rural / Bairro</label>
+                        <input type="text" id="local" placeholder="Ex: Distrito de São José" required>
+                    </div>
+
+                    <div class="grupo-campo">
+                        <label for="categoria">Categoria de Produção</label>
+                        <select id="categoria" required>
+                            <option value="">Selecione uma opção...</option>
+                            <option value="organicos">Hortaliças e Orgânicos</option>
+                            <option value="frutas">Fruticultura de Época</option>
+                            <option value="laticinios">Laticínios e Derivados</option>
+                            <option value="graos">Grãos e Agroecologia</option>
+                        </select>
+                    </div>
+
+                    <div class="grupo-campo">
+                        <label for="contato">WhatsApp para Vendas</label>
+                        <input type="tel" id="contato" placeholder="Ex: (43) 99999-0000" required>
+                    </div>
+
+                    <button type="submit" class="btn-principal">Mapear e Cadastrar</button>
+                </form>
+            </div>
+        </aside>
+
+        <section class="coluna-conteudo">
+            
+            <div class="caixa-branca mapa-container">
+                <h2>Visualização Geográfica (Simulador de Mapa)</h2>
+                <div class="mapa-visual" id="mapa-interativo">
+                    <div class="mapa-legenda">Clique em um marcador para ver detalhes</div>
+                </div>
+            </div>
+
+            <div class="vitrine-topo">
+                <h2>Produtores Registrados</h2>
+                <div class="filtros">
+                    <button class="btn-filtro active" data-categoria="todos">Todos</button>
+                    <button class="btn-filtro" data-categoria="organicos">Orgânicos</button>
+                    <button class="btn-filtro" data-categoria="frutas">Frutas</button>
+                    <button class="btn-filtro" data-categoria="laticinios">Laticínios</button>
+                    <button class="btn-filtro" data-categoria="graos">Grãos</button>
+                </div>
+            </div>
+
+            <div id="lista-produtores" class="grid-produtores">
+                </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container footer-conteudo">
+            <p><strong>AgroConecta 2026</strong> - Desenvolvimento de Software Sustentável aplicado ao Agronegócio Familiar.</p>
+            <p class="tecnologias">Feito com: HTML5 • CSS3 • JavaScript Vanilla (Sem frameworks)</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
